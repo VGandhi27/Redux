@@ -1,11 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit';
-
-import thunk from "redux-thunk";
+import {applyMiddleware, createStore } from "redux";
+import thunk from 'redux-thunk';
 import reducers from "./reducers";
-import { routerMiddleware } from 'connected-react-router';
 
-
- export const store = configureStore(
-    reducers,{},
-  //  middleware(thunk,routerMiddleware),
-  );
+export const store=createStore(reducers,{},applyMiddleware(thunk))
