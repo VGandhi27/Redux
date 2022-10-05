@@ -7,5 +7,5 @@ import { routerMiddleware } from 'connected-react-router';
 
  export const store = configureStore(
     reducers,{},
-    middleware(thunk,routerMiddleware),
+  //  middleware(thunk,routerMiddleware),
   );
